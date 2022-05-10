@@ -1,12 +1,17 @@
 <%- include('header') -%> 
 
 <div class="text-center center-div" id="login">
-    <div class="container w-25 border py-5">
+    <div class="container w-25 border py-5" id="login-container">
         <div class="title pb-5">
-            <h2 class="font-weight-bold">Login System</h2>
-            <span>Log in for the existing user</span>
+            <h2 class="font-weight-bold">Bingo Ball</h2>
+            <span>Log in for an existing user</span>
+            <% if(locals.logout){ %> 
+                <div class="alert alert-success text-center py-0">
+                    <%= logout %> 
+                </div>
+            <% } %> 
         </div>
-        <form action="#" class="pt-3">
+        <form action="/route/login" method="POST" class="pt-3"> 
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="e-mail" name="email">
                 <small class="form-text text-muted float-start">Register email address</small>
@@ -14,7 +19,7 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="password" placeholder="password">
             </div>
-            <button type="button" class="btn btn-success mt-3 rounded-pill">Submit</button>
+            <button type="submit" class="btn btn-success mt-3 rounded-pill">Submit</button>
         </form>
     </div>
 </div>

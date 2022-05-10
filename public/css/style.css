@@ -23,3 +23,18 @@ form{
     font-size: .8em;
 }
 
+@media only screen and (max-width: 1000px) {
+    body{
+        background-size: contain;
+        
+    }
+  }
+
+@media (max-width: 992px) { 
+    #login-container{
+        min-width: 75% !important;
+    }
+    #dashboard-container{
+        min-width: 75% !important;
+    }
+ }
